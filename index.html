@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Strategy for Student Affairs Leaders | NorWest Forge AI</title>
+  <meta name="description" content="The only boutique AI strategy practice built exclusively for Vice Presidents of Student Affairs, Deans of Students, and university Presidents. Ethics-first. Mission-grounded. No vendor conflicts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══ NAV ═══════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" fill="currentColor"/>
+        </svg>
+        <div>
+          <span class="logo-primary">NorWest Forge AI</span>
+          <span class="logo-sub">for Higher Education</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#difference">Why Us</a></li>
+        <li><a href="#framework">Framework</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resources" class="nav-resource">Free Guide</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Campus photo background -->
+    <div class="hero-photo-bg">
+      <img
+        src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80"
+        alt="University campus aerial view"
+        class="hero-photo-img"
+        onerror="this.parentElement.style.background='#1c1a17'"
+      />
+    </div>
+    <div class="hero-overlay"></div>
+
+    <!-- Animated blobs (on top of photo) -->
+    <div class="hero-fx">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+    </div>
+
+    <!-- Neural network animation canvas -->
+    <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero-inner">
+      <!-- LEFT: Text content -->
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          Student Affairs &nbsp;·&nbsp; AI Strategy &nbsp;·&nbsp; Ethics First
+        </div>
+        <h1 class="hero-h1">
+          Your Students Are Already<br />
+          Living in an AI World.<br />
+          <em>Is Your Division Ready?</em>
+        </h1>
+        <p class="hero-p">
+          The only AI strategy practice built exclusively for <strong>Vice Presidents of Student Affairs,
+          Deans of Students, and University Presidents</strong>—by someone who has held those pressures
+          from the inside. No vendor agenda. No generic playbook.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-warm">Book a No-Pressure Discovery Call</a>
+          <a href="#resources" class="btn btn-ghost-warm">Get the Free AI Readiness Guide ↓</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-track"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── STATS BAND ────────────────────────────────────────────────── -->
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-ring-item">
+          <div class="ring-wrap">
+            <svg class="ring-svg" viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(181,117,42,0.12)" stroke-width="5"/>
+              <circle cx="40" cy="40" r="34" fill="none" stroke="#b5752a" stroke-width="5"
+                stroke-dasharray="213" stroke-dashoffset="213" stroke-linecap="round"
+                class="ring-progress" data-value="92" transform="rotate(-90 40 40)">
+                <animate attributeName="stroke-dashoffset" from="213" to="19" dur="2s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+              </circle>
+            </svg>
+            <div class="ring-center"><span class="ring-num" data-target="92">0</span><span class="ring-pct">%</span></div>
+          </div>
+          <div class="ring-label">of students use AI tools daily</div>
+          <div class="ring-src">EDUCAUSE 2025</div>
+        </div>
+        <div class="stat-ring-item">
+          <div class="ring-wrap">
+            <svg class="ring-svg" viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(181,117,42,0.12)" stroke-width="5"/>
+              <circle cx="40" cy="40" r="34" fill="none" stroke="#b5752a" stroke-width="5"
+                stroke-dasharray="213" stroke-dashoffset="213" stroke-linecap="round"
+                class="ring-progress" data-value="93" transform="rotate(-90 40 40)">
+                <animate attributeName="stroke-dashoffset" from="213" to="15" dur="2s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+              </circle>
+            </svg>
+            <div class="ring-center"><span class="ring-num" data-target="93">0</span><span class="ring-pct">%</span></div>
+          </div>
+          <div class="ring-label">of HE staff expect to expand AI use</div>
+          <div class="ring-src">Ellucian 2025</div>
+        </div>
+        <div class="stat-ring-item">
+          <div class="ring-wrap">
+            <svg class="ring-svg" viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(181,117,42,0.12)" stroke-width="5"/>
+              <circle cx="40" cy="40" r="34" fill="none" stroke="#3a7350" stroke-width="5"
+                stroke-dasharray="213" stroke-dashoffset="213" stroke-linecap="round"
+                class="ring-progress" data-value="25" transform="rotate(-90 40 40)">
+                <animate attributeName="stroke-dashoffset" from="213" to="160" dur="2s" begin="0.9s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+              </circle>
+            </svg>
+            <div class="ring-center"><span class="ring-num" data-target="1">0</span><span class="ring-pct"> in 4</span></div>
+          </div>
+          <div class="ring-label">institutions have faced an AI ethics issue</div>
+          <div class="ring-src">UNESCO 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--down wave-divider--white-to-cream"></div>
+
+  <!-- ═══ THE DIFFERENCE ═══════════════════════════════════════════════ -->
+  <section class="section section--cream" id="difference">
+    <div class="container">
+      <div class="diff-grid">
+        <div class="diff-left">
+          <div class="eyebrow">Why This Practice Exists</div>
+          <h2>The Market Was Full of<br />AI Vendors. Empty of<br /><em>Trusted Advisors.</em></h2>
+          <p>Higher education is not a generic enterprise. Student affairs leaders navigate federal compliance, student mental health crises, governance structures, shared governance politics, and the irreducible complexity of campus culture—simultaneously. General AI consultants do not understand the difference between a Resident Director and a Vice President for Student Affairs. Large firms send junior associates who have never sat across from a student in crisis or built a division budget from scratch.</p>
+          <p>This practice exists because the complexity of higher education demands a thought partner who has actually lived inside it—someone who can speak the language of student affairs, translate AI strategy across institutional layers, and help you lead with both confidence and integrity.</p>
+          <a href="#about" class="link-arrow">Meet the founder →</a>
+        </div>
+        <div class="diff-right">
+          <div class="compare-table">
+            <div class="ct-header">
+              <div></div>
+              <div class="ct-col ct-col--them">Everyone Else</div>
+              <div class="ct-col ct-col--us">This Practice</div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">Student affairs expertise</div>
+              <div class="ct-cell ct-no">
+                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="ct-cell ct-yes">
+                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">Vendor-neutral advice</div>
+              <div class="ct-cell ct-no"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <div class="ct-cell ct-yes"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">Ethics-first framework</div>
+              <div class="ct-cell ct-partial">Sometimes</div>
+              <div class="ct-cell ct-yes"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">FERPA &amp; campus politics fluency</div>
+              <div class="ct-cell ct-no"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <div class="ct-cell ct-yes"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">Works with small/mid-size campuses</div>
+              <div class="ct-cell ct-partial">Rarely</div>
+              <div class="ct-cell ct-yes"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">Board-ready deliverables</div>
+              <div class="ct-cell ct-partial">Varies</div>
+              <div class="ct-cell ct-yes"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="ct-row">
+              <div class="ct-label">Entry point under $7,500</div>
+              <div class="ct-cell ct-no"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <div class="ct-cell ct-yes"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--cream-to-forest"></div>
+
+  <!-- ═══ FREE RESOURCE / LEAD MAGNET ═════════════════════════════════ -->
+  <section class="resource-section" id="resources">
+    <div class="container">
+      <div class="resource-badge">Free for Student Affairs Leaders</div>
+      <div class="resource-body">
+        <div class="resource-text">
+          <h2>Before Your Division Adopts a Single<br/>AI Tool, Ask These 12 Questions.</h2>
+          <p>Most student affairs divisions jump into AI tools before they have the governance, ethics framework, or staff readiness to use them well. This guide gives you the exact questions every VPSA and Dean of Students should answer first.</p>
+          <ul class="resource-list">
+            <li>How to evaluate AI tools against your institutional mission</li>
+            <li>The FERPA questions your IT team may not have asked</li>
+            <li>How to assess your staff's actual readiness (not just their interest)</li>
+            <li>What your Board needs to hear before your first AI announcement</li>
+          </ul>
+          <form class="resource-form" id="resourceForm">
+            <div class="rf-row">
+              <input type="text" placeholder="Your name" required />
+              <input type="email" placeholder="Institutional email" required />
+              <button type="submit" class="btn btn-warm">Send Me the Guide</button>
+            </div>
+            <p class="rf-note">No spam. Just the guide. Unsubscribe anytime.</p>
+          </form>
+        </div>
+        <div class="resource-visual">
+          <div class="guide-mockup">
+            <div class="gm-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" fill="#b5752a"/>
+              </svg>
+              <div class="gm-title">AI Readiness Guide<br/><span>for Student Affairs Leaders</span></div>
+            </div>
+            <div class="gm-lines">
+              <div class="gm-line--title">12 Questions Before You<br/>Adopt Any AI Tool</div>
+              <div class="gm-q"><span>01</span> Is this tool FERPA-compliant?</div>
+              <div class="gm-q"><span>02</span> What student data does it retain?</div>
+              <div class="gm-q"><span>03</span> Does it align with our mission?</div>
+              <div class="gm-q gm-q--blur"><span>04</span> <em>Unlock in full guide…</em></div>
+              <div class="gm-q gm-q--blur"><span>05</span> <em>Unlock in full guide…</em></div>
+              <div class="gm-q gm-q--blur"><span>06</span> <em>Unlock in full guide…</em></div>
+            </div>
+            <div class="gm-cta">Download all 12 questions →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--forest-to-cream"></div>
+
+  <!-- ═══ THE SIGNAL FRAMEWORK ════════════════════════════════════════ -->
+  <section class="section section--cream" id="framework">
+    <div class="container">
+      <div class="fw-intro">
+        <div class="eyebrow">The Proprietary Method</div>
+        <h2>Introducing the <span class="fw-name">SIGNAL</span> Framework</h2>
+        <p class="section-sub">A structured six-phase process that builds your division's AI capability from the ground up—in the right order.</p>
+      </div>
+
+      <!-- SIGNAL Visual Diagram -->
+      <div class="signal-diagram">
+        <div class="sd-step" data-phase="S">
+          <div class="sd-circle">
+            <svg viewBox="0 0 40 40" fill="none" class="sd-icon">
+              <!-- Magnifying glass -->
+              <circle cx="17" cy="17" r="8" stroke="currentColor" stroke-width="2"/>
+              <line x1="23" y1="23" x2="30" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span class="sd-letter">S</span>
+          </div>
+          <div class="sd-connector"><div class="sd-line"></div></div>
+          <div class="sd-label">Survey</div>
+          <div class="sd-sublabel">Landscape Assessment</div>
+        </div>
+        <div class="sd-step" data-phase="I">
+          <div class="sd-circle">
+            <svg viewBox="0 0 40 40" fill="none" class="sd-icon">
+              <!-- Shield check -->
+              <path d="M20,4 L8,9 L8,19 C8,25 14,30 20,32 C26,30 32,25 32,19 L32,9 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M14,19 L18,23 L26,15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="sd-letter">I</span>
+          </div>
+          <div class="sd-connector"><div class="sd-line"></div></div>
+          <div class="sd-label">Identify</div>
+          <div class="sd-sublabel">Ethics &amp; Risk</div>
+        </div>
+        <div class="sd-step" data-phase="G">
+          <div class="sd-circle">
+            <svg viewBox="0 0 40 40" fill="none" class="sd-icon">
+              <!-- Org chart / governance -->
+              <rect x="16" y="4"  width="8" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="6"  y="18" width="8" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="18" width="8" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <line x1="20" y1="11" x2="20" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="2"/>
+              <line x1="30" y1="16" x2="30" y2="18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="sd-letter">G</span>
+          </div>
+          <div class="sd-connector"><div class="sd-line"></div></div>
+          <div class="sd-label">Govern</div>
+          <div class="sd-sublabel">Governance Design</div>
+        </div>
+        <div class="sd-step" data-phase="N">
+          <div class="sd-circle">
+            <svg viewBox="0 0 40 40" fill="none" class="sd-icon">
+              <!-- Chat bubbles -->
+              <path d="M8,8 L28,8 C30,8 32,10 32,12 L32,20 C32,22 30,24 28,24 L16,24 L10,30 L10,24 C8,24 6,22 6,20 L6,12 C6,10 8,8 10,8 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <span class="sd-letter">N</span>
+          </div>
+          <div class="sd-connector"><div class="sd-line"></div></div>
+          <div class="sd-label">Narrate</div>
+          <div class="sd-sublabel">Change Management</div>
+        </div>
+        <div class="sd-step" data-phase="A">
+          <div class="sd-circle">
+            <svg viewBox="0 0 40 40" fill="none" class="sd-icon">
+              <!-- Lightning bolt / activate -->
+              <path d="M22,4 L12,20 L20,20 L18,36 L28,16 L20,16 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+            <span class="sd-letter">A</span>
+          </div>
+          <div class="sd-connector"><div class="sd-line"></div></div>
+          <div class="sd-label">Activate</div>
+          <div class="sd-sublabel">Strategic Roadmap</div>
+        </div>
+        <div class="sd-step sd-step--last" data-phase="L">
+          <div class="sd-circle">
+            <svg viewBox="0 0 40 40" fill="none" class="sd-icon">
+              <!-- Refresh/learn loop -->
+              <path d="M28,14 C25,9 19,7 14,10 C8,13 6,20 9,26 C12,32 19,34 25,31 C31,28 33,21 30,15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <polygon points="28,8 32,16 24,16" fill="currentColor"/>
+            </svg>
+            <span class="sd-letter">L</span>
+          </div>
+          <div class="sd-label">Learn</div>
+          <div class="sd-sublabel">Ongoing Refinement</div>
+        </div>
+      </div>
+
+      <!-- Detail steps -->
+      <div class="fw-steps">
+        <div class="fw-step">
+          <div class="fw-letter">S</div>
+          <div class="fw-content">
+            <div class="fw-word">Survey</div>
+            <h3>Landscape Assessment</h3>
+            <p>Inventory every AI tool currently in use across your division—official and unofficial. Map the gaps, overlaps, and risks you didn't know you had.</p>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-letter">I</div>
+          <div class="fw-content">
+            <div class="fw-word">Identify</div>
+            <h3>Ethics &amp; Risk Architecture</h3>
+            <p>Audit FERPA exposure, bias risks, and mission-alignment gaps before a single new tool is deployed. Build your ethical AI principles with your team, not for them.</p>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-letter">G</div>
+          <div class="fw-content">
+            <div class="fw-word">Govern</div>
+            <h3>Governance Design</h3>
+            <p>Establish clear decision-making structures: who approves new AI tools, who monitors data use, and who owns the division's AI narrative with students.</p>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-letter">N</div>
+          <div class="fw-content">
+            <div class="fw-word">Narrate</div>
+            <h3>Change Management</h3>
+            <p>Address staff anxiety before it becomes resistance. Develop the internal and external narrative that positions your division as thoughtful innovators, not reluctant adopters.</p>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-letter">A</div>
+          <div class="fw-content">
+            <div class="fw-word">Activate</div>
+            <h3>Strategic Roadmap</h3>
+            <p>Prioritize the right tools, in the right sequence, with realistic timelines. Build a phased plan that your Board can approve and your staff can execute.</p>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-letter">L</div>
+          <div class="fw-content">
+            <div class="fw-word">Learn</div>
+            <h3>Ongoing Refinement</h3>
+            <p>AI in higher education is not a one-time project. Establish the feedback loops, success metrics, and review cadences that keep your strategy current as the landscape shifts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fw-cta-row">
+        <p>The SIGNAL Framework is the backbone of every engagement—from a one-day diagnostic to a full year of implementation support.</p>
+        <a href="#contact" class="btn btn-warm">See Which Phase Fits Your Institution</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ─────────────────────────────────────────────── -->
+  <section class="section" id="howitworks">
+    <div class="container">
+      <div class="eyebrow">The Process</div>
+      <h2>How We Work Together</h2>
+      <p class="section-sub">No 12-month contract required to get started. Most leaders begin with the Diagnostic and expand from there.</p>
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <div class="hiw-num">01</div>
+          <div class="hiw-body">
+            <h3>30-Minute Discovery Call</h3>
+            <p>Free. Confidential. We talk about where your institution is, what's keeping you up at night, and whether this practice is the right fit. No pitch deck. No follow-up pressure.</p>
+            <div class="hiw-time">30 minutes &nbsp;·&nbsp; No cost</div>
+          </div>
+        </div>
+        <div class="hiw-arrow">→</div>
+        <div class="hiw-step hiw-step--featured">
+          <div class="hiw-num">02</div>
+          <div class="hiw-body">
+            <h3>AI Readiness Diagnostic</h3>
+            <p>A structured assessment of your division's AI landscape. Delivered as an executive report and board-ready deck in 2–3 weeks.</p>
+            <div class="hiw-time">2–3 weeks</div>
+          </div>
+        </div>
+        <div class="hiw-arrow">→</div>
+        <div class="hiw-step">
+          <div class="hiw-num">03</div>
+          <div class="hiw-body">
+            <h3>Build the Strategy</h3>
+            <p>Based on the Diagnostic, we design the right next engagement—coaching retainer, full roadmap, or implementation. You choose the scope and pace.</p>
+            <div class="hiw-time">Flexible format &nbsp;·&nbsp; Tailored pricing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--white-to-dark"></div>
+
+  <!-- ═══ SERVICES ─────────────────────────────────────────────────── -->
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <div class="eyebrow eyebrow--light">What We Offer</div>
+      <h2 class="h2--light">Services for Every Stage<br/>of Your AI Journey</h2>
+      <p class="section-sub section-sub--light">From a first conversation to full implementation. Every engagement is shaped by the SIGNAL Framework and your institution's unique culture.</p>
+      <div class="services-grid">
+        <div class="svc-card svc-card--highlight">
+          <div class="svc-tag">Most Popular Entry Point</div>
+          <!-- Service card bg graphic -->
+          <div class="svc-bg-graphic">
+            <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="180" cy="20" r="60" fill="rgba(181,117,42,0.07)"/>
+              <circle cx="180" cy="20" r="40" fill="rgba(181,117,42,0.05)"/>
+            </svg>
+          </div>
+          <div class="svc-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="12" cy="12" r="8" stroke="#b5752a" stroke-width="2"/>
+              <line x1="18" y1="18" x2="25" y2="25" stroke="#b5752a" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="9" y1="12" x2="15" y2="12" stroke="#b5752a" stroke-width="1.5"/>
+              <line x1="12" y1="9" x2="12" y2="15" stroke="#b5752a" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>AI Readiness Diagnostic</h3>
+          <div class="svc-price">Reach out for pricing</div>
+          <p>A structured, expert-led assessment of where your division actually stands with AI—covering current tool use, ethics risks, FERPA exposure, staff capacity, and strategic opportunity.</p>
+          <ul class="svc-list">
+            <li>Full AI inventory across your division</li>
+            <li>FERPA &amp; ethics risk mapping</li>
+            <li>Staff readiness pulse assessment</li>
+            <li>Board-ready executive summary</li>
+            <li>Prioritized action framework</li>
+          </ul>
+          <div class="svc-note">Typically approvable within a standard PD or consulting budget line.</div>
+          <a href="#contact" class="btn btn-warm">Start with the Diagnostic</a>
+        </div>
+        <div class="svc-card">
+          <div class="svc-bg-graphic"><svg viewBox="0 0 200 120" fill="none"><circle cx="180" cy="20" r="60" fill="rgba(45,90,61,0.07)"/></svg></div>
+          <div class="svc-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="10" r="5" stroke="#3a7350" stroke-width="2"/>
+              <path d="M4,24 C4,18 24,18 24,24" stroke="#3a7350" stroke-width="2" stroke-linecap="round"/>
+              <line x1="20" y1="6" x2="26" y2="6" stroke="#3a7350" stroke-width="2" stroke-linecap="round"/>
+              <line x1="20" y1="10" x2="24" y2="10" stroke="#3a7350" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Executive Coaching Retainer</h3>
+          <div class="svc-price">Reach out for pricing</div>
+          <p>One-on-one strategic thought partnership for VPSAs and Deans of Students navigating AI decisions, board presentations, vendor evaluations, and institutional politics.</p>
+          <ul class="svc-list">
+            <li>3–5 strategy sessions per month</li>
+            <li>On-call advisory between sessions</li>
+            <li>Board presentation coaching</li>
+            <li>Vendor evaluation support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-warm">Inquire</a>
+        </div>
+        <div class="svc-card">
+          <div class="svc-bg-graphic"><svg viewBox="0 0 200 120" fill="none"><circle cx="180" cy="20" r="60" fill="rgba(181,117,42,0.05)"/></svg></div>
+          <div class="svc-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <rect x="4" y="4" width="20" height="20" rx="2" stroke="#b5752a" stroke-width="2"/>
+              <line x1="4" y1="10" x2="24" y2="10" stroke="#b5752a" stroke-width="1.5"/>
+              <line x1="10" y1="15" x2="18" y2="15" stroke="#b5752a" stroke-width="1.5"/>
+              <line x1="10" y1="19" x2="16" y2="19" stroke="#b5752a" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Division AI Roadmap</h3>
+          <div class="svc-price">Reach out for pricing</div>
+          <p>A comprehensive SIGNAL-based strategic roadmap for AI integration across your student affairs division—from governance design to phased implementation and change management.</p>
+          <ul class="svc-list">
+            <li>Full SIGNAL Framework applied</li>
+            <li>Governance &amp; ethics architecture</li>
+            <li>Vendor-neutral evaluation rubric</li>
+            <li>Multi-year phased implementation plan</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-warm">Inquire</a>
+        </div>
+        <div class="svc-card">
+          <div class="svc-bg-graphic"><svg viewBox="0 0 200 120" fill="none"><circle cx="180" cy="20" r="60" fill="rgba(45,90,61,0.06)"/></svg></div>
+          <div class="svc-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M14,4 L10,14 L16,14 L12,24 L22,12 L16,12 L20,4 Z" stroke="#3a7350" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Full Implementation Support</h3>
+          <div class="svc-price">Reach out for pricing</div>
+          <p>Ongoing implementation partnership for institutions ready to operationalize their AI strategy—including cross-divisional coordination, staff enablement, and retention analytics design.</p>
+          <ul class="svc-list">
+            <li>Cross-divisional AI integration</li>
+            <li>Staff training &amp; enablement</li>
+            <li>Early-alert analytics design</li>
+            <li>Continuous strategy refinement</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-warm">Inquire</a>
+        </div>
+
+        <!-- Speaking card — full width with photo -->
+        <div class="svc-card svc-card--wide svc-card--speaking">
+          <div class="svc-speaking-photo">
+            <img
+              src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+              alt="Conference keynote speaking engagement"
+              onerror="this.src=''; this.parentElement.classList.add('photo-error')"
+            />
+            <div class="svc-speaking-overlay"></div>
+          </div>
+          <div class="svc-speaking-content">
+            <div class="svc-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="10" r="4" stroke="#b5752a" stroke-width="2"/>
+                <path d="M6,26 C6,20 22,20 22,26" stroke="#b5752a" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18,6 C19,7 20,9 20,10" stroke="#b5752a" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M22,4 C24,6 25,8 25,11" stroke="#b5752a" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Keynote &amp; Workshop</h3>
+            <div class="svc-price">Reach out for pricing</div>
+            <p>Evidence-grounded, story-driven sessions for NASPA, ACPA, regional conferences, or institutional professional development.</p>
+            <div class="svc-topics">
+              <span>NASPA Annual</span><span>ACPA Convention</span>
+              <span>Cabinet Retreats</span><span>Board Presentations</span><span>Institutional PD Days</span>
+            </div>
+            <a href="#contact" class="btn btn-outline-warm">Book a Speaking Engagement</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--dark-to-cream"></div>
+
+  <!-- ═══ ABOUT / FOUNDER ══════════════════════════════════════════════ -->
+  <section class="section section--cream" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-portrait-col">
+          <!-- Replace this img src with your actual professional photo -->
+          <div class="portrait-frame">
+            <div class="portrait-placeholder">
+              <img
+                src="founder-photo.jpg"
+                alt="Founder — replace with your professional headshot"
+                class="portrait-photo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div class="portrait-fallback">
+                <div class="pp-initials">YI</div>
+                <p class="pp-note">Add your professional photo here</p>
+              </div>
+            </div>
+            <div class="portrait-accent-bar"></div>
+            <div class="portrait-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" fill="#b5752a"/>
+              </svg>
+              Active Dean of Students &amp; AVP
+            </div>
+          </div>
+          <div class="founder-quick">
+            <div class="fq-item">
+              <div class="fq-icon">🎓</div>
+              <div>Dean of Students &amp; AVP<br/><span>Active higher ed executive</span></div>
+            </div>
+            <div class="fq-item">
+              <div class="fq-icon">📋</div>
+              <div>AI Initiative Leadership<br/><span>Demonstrated results on campus</span></div>
+            </div>
+            <div class="fq-item">
+              <div class="fq-icon">🏛️</div>
+              <div>Mission-Driven Orientation<br/><span>Catholic institution background</span></div>
+            </div>
+            <div class="fq-item">
+              <div class="fq-icon">🤝</div>
+              <div>NASPA &amp; ACPA Active<br/><span>Deep sector relationships</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-story">
+          <div class="eyebrow">The Founder's Story</div>
+          <h2>I've Sat in the Chair<br/><em>You're Sitting In.</em></h2>
+          <p class="about-lead">As a sitting Dean of Students and AVP, I've watched AI arrive on our campuses without a roadmap. I've fielded the vendor calls, navigated the FERPA questions, coached anxious staff, and prepared the Board presentation—without anyone to call.</p>
+          <p>That experience is what this practice is built on. Not a background in technology. Not a consulting framework borrowed from healthcare or finance. A genuine understanding of the weight of this work—and the mission that holds it together.</p>
+          <p>I started this practice because VPSAs deserve better than a junior consultant from a large firm who's never heard of NASPA, or a productivity coach who doesn't know what a conduct board looks like. You deserve a thought partner who understands both the strategy <em>and</em> the soul of student affairs.</p>
+          <div class="about-philosophy">
+            <div class="ap-icon">"</div>
+            <p>The scarcity position is: a student affairs insider who speaks the language of Presidents. Revenue follows credibility—and credibility here is earned on campus, not in a boardroom.</p>
+          </div>
+          <div class="about-creds">
+            <div class="ac-item">Active Dean of Students &amp; AVP</div>
+            <div class="ac-item">AI Initiative Leadership Experience</div>
+            <div class="ac-item">Executive Coaching Training</div>
+            <div class="ac-item">Mission-Driven Institution Background</div>
+            <div class="ac-item">NASPA &amp; ACPA Conference Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ─────────────────────────────────────────────── -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="eyebrow">From the Field</div>
+      <h2>What Student Affairs<br/>Leaders Are Saying</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"For the first time, I felt like someone in the room actually understood what it means to lead student affairs—and could translate that into an AI strategy that our President and Board would actually trust."</p>
+          <div class="testi-attr">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #2d5a3d, #3a7350)">VP</div>
+            <div>
+              <strong>Vice President for Student Affairs</strong>
+              <span>Private Liberal Arts Institution</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card testi-card--featured">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The AI Readiness Diagnostic uncovered three FERPA exposure points we didn't know existed and gave us a clear roadmap I could take directly to my Cabinet. Worth every dollar."</p>
+          <div class="testi-attr">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #b5752a, #d4922f)">DS</div>
+            <div>
+              <strong>Dean of Students</strong>
+              <span>Mid-Size Catholic University</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"My staff went from anxious about AI to excited about it—because the change management approach was built for student affairs culture, not borrowed from a corporate handbook."</p>
+          <div class="testi-attr">
+            <div class="testi-avatar" style="background: linear-gradient(135deg, #1c3a5e, #2a5298)">AVP</div>
+            <div>
+              <strong>Associate VP for Student Success</strong>
+              <span>Regional Public University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="testi-note">Client names withheld at their request.</p>
+    </div>
+  </section>
+
+  <!-- ═══ INSTITUTIONS WE SERVE ────────────────────────────────────── -->
+  <section class="institutions-band">
+    <div class="container">
+      <div class="ib-inner">
+        <span class="ib-label">Built for</span>
+        <div class="ib-types">
+          <div class="ib-type"><div class="ib-icon">✝️</div><span>Catholic &amp;<br/>Faith-Based</span></div>
+          <div class="ib-type"><div class="ib-icon">🎓</div><span>HBCUs</span></div>
+          <div class="ib-type"><div class="ib-icon">📚</div><span>Liberal Arts<br/>Colleges</span></div>
+          <div class="ib-type"><div class="ib-icon">🏛️</div><span>Mid-Size<br/>Universities</span></div>
+          <div class="ib-type"><div class="ib-icon">🌎</div><span>Regional<br/>Institutions</span></div>
+        </div>
+        <p class="ib-note">Engagements designed to fit mid-size institution budgets and timelines—not just enterprise schools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--white-to-dark"></div>
+
+  <!-- ═══ EVIDENCE ─────────────────────────────────────────────────── -->
+  <section class="section section--dark" id="evidence">
+    <div class="container">
+      <div class="eyebrow eyebrow--light">The Evidence</div>
+      <h2 class="h2--light">The Clock Is Running.<br/>The Gap Is Real.</h2>
+      <div class="evidence-grid">
+        <div class="ev-item">
+          <div class="ev-num">92%</div>
+          <div class="ev-label">of students use AI tools</div>
+          <p>Student affairs professionals are now counseling, adjudicating, and supporting students embedded in AI-mediated workflows—without a framework to do so ethically.</p>
+        </div>
+        <div class="ev-item">
+          <div class="ev-num">93%</div>
+          <div class="ev-label">of HE staff expect to expand AI use</div>
+          <p>Ellucian, 2025. The structural support to do so strategically and ethically is nearly nonexistent at the division level.</p>
+        </div>
+        <div class="ev-item">
+          <div class="ev-num">1 in 4</div>
+          <div class="ev-label">institutions have faced an AI ethics issue</div>
+          <p>UNESCO, 2025. Student affairs divisions are first to handle the human fallout: appeals, equity complaints, mental health impacts, privacy concerns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAVE DIVIDER ─────────────────────────────────────────────── -->
+  <div class="wave-divider wave-divider--dark-to-cream"></div>
+
+  <!-- ═══ CONTACT / CTA ────────────────────────────────────────────── -->
+  <section class="section section--cream" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="eyebrow">Let's Talk</div>
+          <h2>No Pitch Deck.<br/>No Obligation.<br/><em>Just a Real Conversation.</em></h2>
+          <p>The discovery call is exactly what it sounds like: 30 minutes to talk about where your institution stands and whether this practice is the right fit.</p>
+          <p>If we're not a match, I'll say so—and try to point you toward someone who is.</p>
+          <div class="contact-options-list">
+            <a href="mailto:hello@norwestforgeai.com?subject=AI Readiness Diagnostic Inquiry" class="col-option">
+              <div class="co-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8" cy="8" r="6" stroke="#b5752a" stroke-width="1.8"/><line x1="12.5" y1="12.5" x2="17" y2="17" stroke="#b5752a" stroke-width="2.2" stroke-linecap="round"/></svg>
+              </div>
+              <div><strong>AI Readiness Diagnostic</strong><span>2–3 weeks · Board-ready deliverable</span></div>
+              <div class="co-arrow">→</div>
+            </a>
+            <a href="mailto:hello@norwestforgeai.com?subject=Executive Coaching Inquiry" class="col-option">
+              <div class="co-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="4" stroke="#b5752a" stroke-width="1.8"/><path d="M3,18 C3,13 17,13 17,18" stroke="#b5752a" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div><strong>Executive Coaching Retainer</strong><span>Ongoing thought partnership</span></div>
+              <div class="co-arrow">→</div>
+            </a>
+            <a href="mailto:hello@norwestforgeai.com?subject=Speaking Inquiry" class="col-option">
+              <div class="co-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="#b5752a" stroke-width="1.8"/><line x1="6" y1="9" x2="14" y2="9" stroke="#b5752a" stroke-width="1.5"/><line x1="6" y1="12" x2="11" y2="12" stroke="#b5752a" stroke-width="1.5"/></svg>
+              </div>
+              <div><strong>Keynote or Workshop</strong><span>NASPA, ACPA, institutional PD</span></div>
+              <div class="co-arrow">→</div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contactForm" name="contact" netlify>
+            <h3>Send a Message</h3>
+            <div class="cf-group">
+              <label>Your name</label>
+              <input type="text" placeholder="Dr. Jane Smith" required />
+            </div>
+            <div class="cf-row">
+              <div class="cf-group">
+                <label>Title</label>
+                <input type="text" placeholder="VPSA" required />
+              </div>
+              <div class="cf-group">
+                <label>Institution</label>
+                <input type="text" placeholder="State University" required />
+              </div>
+            </div>
+            <div class="cf-group">
+              <label>Institutional email</label>
+              <input type="email" placeholder="jsmith@university.edu" required />
+            </div>
+            <div class="cf-group">
+              <label>I'm most interested in…</label>
+              <select>
+                <option value="">Choose a service</option>
+                <option>AI Readiness Diagnostic</option>
+                <option>Executive Coaching Retainer</option>
+                <option>Division AI Roadmap</option>
+                <option>Full Implementation Support</option>
+                <option>Keynote or Workshop</option>
+                <option>Free Discovery Call First</option>
+              </select>
+            </div>
+            <div class="cf-group">
+              <label>What's your biggest AI challenge right now?</label>
+              <textarea rows="4" placeholder="Tell me where you're stuck, what's keeping you up at night, or what you need before your next Board meeting…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warm btn-full">Send Message</button>
+            <p class="cf-note">Responded to within 48 hours. All inquiries are completely confidential.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-campus-bg">
+      <img
+        src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80"
+        alt=""
+        aria-hidden="true"
+        onerror="this.parentElement.style.background='#1c1a17'"
+      />
+      <div class="footer-campus-overlay"></div>
+    </div>
+    <div class="container footer-inner-wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" fill="currentColor"/>
+            </svg>
+            <div>
+              <span class="logo-primary">NorWest Forge AI</span>
+              <span class="logo-sub">for Higher Education</span>
+            </div>
+          </a>
+          <p>Ethical AI Strategy for Mission-Driven Campuses.<br/>Serving VPSAs, Deans of Students, and University Presidents.</p>
+          <div class="footer-tagline"><em>The SIGNAL Framework · Vendor-Neutral · Ethics First</em></div>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <strong>Services</strong>
+            <a href="#services">AI Readiness Diagnostic</a>
+            <a href="#services">Executive Coaching</a>
+            <a href="#services">Division AI Roadmap</a>
+            <a href="#services">Keynote &amp; Workshop</a>
+          </div>
+          <div class="fl-col">
+            <strong>Practice</strong>
+            <a href="#framework">The SIGNAL Framework</a>
+            <a href="#difference">Why This Practice</a>
+            <a href="#about">About the Founder</a>
+            <a href="#resources">Free AI Readiness Guide</a>
+          </div>
+          <div class="fl-col">
+            <strong>Connect</strong>
+            <a href="#contact">Book a Discovery Call</a>
+            <a href="#contact">Speaking Inquiries</a>
+            <a href="mailto:hello@norwestforgeai.com">hello@norwestforgeai.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NorWest Forge AI. All rights reserved.</p>
+        <p>Serving higher education leaders with independent, ethics-first AI strategy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="hero-animation.js"></script>
+</body>
+</html>
